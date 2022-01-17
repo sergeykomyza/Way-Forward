@@ -1,0 +1,25 @@
+section.programms 
+	img.rocket-decor-1.visible-768(src="img/stamp-rocket.png", alt="stamp-rocket")
+	.programms__box.box 
+		img.programms__img(src="img/our-programms.webp", alt="programms")
+		.programms__content 
+			h3.programms__title.title Наши программы 
+			p.programms__text В Way Forward разработаны онлайн и оффлайн программы для дошкольников, школьников, а также взрослых. 
+				span.hidden-768 Как показывает практика WF,  все прошедшие обучение в школе становятся лидерами в выбранной ими отрасли и успешными людьми в целом. У них появляется здоровый интерес к научной, культурной, общественной деятельности. Каждый может выбрать свои направления, и в центре будут развивать их.
+			.programms__items
+				-
+					const list = [
+						'Погружение в предмет онлайн',
+						'Погружение в предмет офлайн',
+						'Семейная школа',
+						'Школа выходного дня',
+						'Подготовка к школе',
+						'Школа экстернат',
+						'Раннее музыкальное развитие',
+						'Резонансный голос',
+						'Дополнительное образование'
+					]
+				each item in list 
+					a.programms__item(href="")= item
+			a.programms__link(href="") подробнее о направлениях
+				img(src="img/link-arrow.svg", alt="link-arrow")

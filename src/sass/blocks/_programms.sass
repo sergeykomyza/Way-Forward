@@ -1,0 +1,82 @@
+.programms
+	&__box
+		display: flex
+		padding: 0 0 0 4.4rem
+	&__img
+		width: 32.0625rem
+		margin: 0 1.8rem 0 0
+	&__content
+		position: relative
+		padding: 4.1rem 8.5rem 0 0
+	&__title
+		margin: 0 0 2rem 0
+		&::before
+			content: ''
+			position: absolute
+			top: 1.6rem
+			left: 0
+			width: 5.875rem
+			height: 0.4375rem
+			background: $titles-color
+	&__text
+		margin: 0 0 2.5rem 0
+		font-size: $px18
+		letter-spacing: 0.25px
+		line-height: 1.25rem
+		span
+			line-height: 1.25rem
+	&__link
+		display: flex
+		align-items: center
+		font-size: $px14
+		font-weight: 700
+		color: $yellow
+		text-transform: uppercase
+		img
+			width: 0.53875rem
+			margin: -0.2rem 0 0 0.5rem
+		&:hover
+			color: $yellow
+	&__items
+		display: none
+		grid-template-columns: 1fr 1fr
+		gap: 0.5rem
+		margin: 0 0 1rem 0
+	&__item
+		display: flex
+		justify-content: center
+		padding: 0.75rem 0rem
+		font-size: 0.60125rem
+		font-weight: 700
+		color: #FFF
+		border: 0.68744px solid #FFFFFF
+		border-radius: 3.4372px
+		background: $titles-color
+		&:hover
+			color: #FFF
+			background: $yellow
+
+.rocket-decor-1
+	position: absolute
+	right: 3.6rem
+	top: -1.5rem
+
+@media screen and ( max-width: 768px )
+	.programms
+		&__box
+			padding: 0 1rem
+		&__title
+			text-align: center
+			&::before
+				left: calc(50% - 2.4rem)
+				width: 4.89rem
+				height: 0.364375rem
+		&__text
+			margin: 0 0 1rem 0
+			font-size: $px14
+		&__img
+			display: none
+		&__content
+			padding: 0 0 0 0
+		&__items
+			display: grid

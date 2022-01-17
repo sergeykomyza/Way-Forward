@@ -1,28 +1,23 @@
-section.home 
-	.home__box
+section.home
+	img.home__bg.visible-768(src="img/home-bg.png", alt="home-bg")
+	.home__box.box
 		.home__content 
 			h1.home__title way forward
-			p.home__text Образовательный центр для школьников и дошкольников. 
-			p.home__text Сочетаем проверенную временем методику: методика погружения с элементами резонансной практики. 
-			p.home__text Благодаря такой методике детям комфортно учиться, а родители уверены в качестве их образования.
+			p.home__text.hidden-768 Образовательный центр для школьников и дошкольников.
+			p.home__text.visible-768 Образовательный центр для школьников и дошкольников, в котором детям комфортно учиться, а родители уверены в качестве их образования.
+			p.home__text.hidden-768 Сочетаем проверенную временем методику: методика погружения с элементами резонансной практики. 
+			p.home__text.hidden-768 Благодаря такой методике детям комфортно учиться, а родители уверены в качестве их образования.
 			.home__buttons 
+				button.watch-video.visible-768 
+					| посмотреть видео
+					img(src="img/watch-video-arrow.svg", alt="watch-video-arrow")
 				button.button.home__button Записаться на открытый урок
 				button.home__button--transparent Узнать больше
 		.home__video.video 
 			img.video__bg(src="img/video-bg.webp", alt="video")
+			//- img.video__bg.visible-768(src="img/video-bg-mobile.webp", alt="video")
 			.video__box 
 				iframe(src='https://www.youtube.com/embed/oGi8Z3W2AYo' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-	.home__sales.sales
-		h2.sales__title Акции
-		.slider
-			.slider__carousel
-				.slide 
-					b.slide__title Только до 31 января
-					p.slide__text При покупке курса “Дошкольное образование”  дарим занятие по раннему музыкальному развитию
-					a.slide__link(href="") Подробнее...
-				.slide 
-					b.slide__title Только до 5 февраля
-					p.slide__text Скидка 20% при покупке курса Подготовка к школе
-					a.slide__link(href="") Подробнее...
+
 
 

@@ -18,6 +18,7 @@ body
 	font-family: $font-1
 	font-weight: 400
 	color: $main-color
+	overflow-x: hidden
 
 ul 
 	margin: 0
@@ -45,48 +46,52 @@ input
 section
 	position: relative
 
-.text
-	font-size: $px18
-
 .button
 	display: flex
 	align-items: center
 	justify-content: center
-	height: 3.3rem
-	padding: 0 2.8rem
+	padding: 1.1rem 2.8rem
 	font-size: $px14
 	font-weight: 700
 	color: #FFF
-	background: #FCAF16
+	background: $yellow
 	border-radius: 5px
 
-// переопределить ширину контейнера bootstrap
-.container
-	max-width: 1054px
-	position: relative
-	margin-left: auto
-	margin-right: auto
-	padding-right: 15px
-	padding-left: 15px
+.box
+	width: 100%
+	max-width: 73.3rem
+	margin: 0 auto
 
-.visible-992
-	display: none
+.title
+	font-size: $px36
+	font-weight: 700
+	color: $titles-color
 
+.visible-768
+	display: none !important
 
-@media screen and ( max-width: 992px )
-	.visible-992
-		display: block
-	.hidden-992
-		display: none
+@media screen and ( max-width: 1200px )
+	html
+		font-size: 1.3vw
+
+@media screen and ( max-width: 768px )
+	html
+		font-size: 4.26668vw
+	.visible-768
+		display: block !important
+	.hidden-768
+		display: none !important
+	.title
+		font-size: $px20
 
 /* ============================================================= HEADER */
 @import 'blocks/header'
 /* ============================================================= HOME */
 @import 'blocks/home'
-/* ============================================================= SECTION */
-@import 'blocks/section1'
-/* ============================================================= SECTION */
-@import 'blocks/section2'
+/* ============================================================= АКЦИИ */
+@import 'blocks/sales'
+/* ============================================================= НАШИ ПРОГРАММЫ */
+@import 'blocks/programms'
 /* ============================================================= SECTION */
 @import 'blocks/section3'
 /* ============================================================= SECTION */

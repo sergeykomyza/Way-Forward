@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', headerActiveToggle) // ПРИ СКРОЛЛЕ
 });
 
+// ================================================== GAMBURGER
+const gamburger = document.querySelector('.gamburger');
+const firstLine = gamburger.querySelectorAll('span')[0];
+const middleLine = gamburger.querySelectorAll('span')[1];
+const lastLine = gamburger.querySelectorAll('span')[2];
+gamburger.addEventListener('click', function(){
+    middleLine.classList.toggle('open');
+    firstLine.classList.toggle('open');
+    lastLine.classList.toggle('open');
+});
+
 // ================================================== МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
 $(document).ready(function () {
     $(".phone").inputmask({
@@ -48,23 +59,29 @@ $(document).ready(function () {
 
 // ================================================== СЛАЙДЕРЫ (https://kenwheeler.github.io/slick/)
 document.addEventListener('DOMContentLoaded', function () {
-    $('.slider').slick({
+    $('.slider-sales__carousel').slick({
         fade: false,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        // prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-        // nextArrow: '<button type="button" class="slick-next">Next</button>',
+        arrows: false,
+        dots: false,
+        // prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
+        // nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             }
         ]
+    });
+    $(".prev").on("click", function () {
+        $('.slider-sales__carousel').slick("slickPrev")
+    });
+    $(".next").on("click", function () {
+        $('.slider-sales__carousel').slick("slickNext")
     });
     // пользовательская навигация
     // var dot = $(".dots__item");
@@ -75,15 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
     //     var i = dot.index(this);
     //     $('.slider').slick("slickGoTo", i)
     // });
-    // $(".prev").on("click", function () {
-    //     $('.slider').slick("slickPrev")
-    // });
-    // $(".next").on("click", function () {
-    //     $('.slider').slick("slickNext")
-    // });
 
 });
-// ================================================== 
+// ================================================== HOVER ON MENU
     const menuItem = document.querySelectorAll('.menu__item')
     menuItem.forEach(item => {
         const subMenu = item.querySelector('.submenu')
@@ -96,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 1000)
         })
     })
-// ================================================== 
 
 // ================================================== 
 // ================================================== 

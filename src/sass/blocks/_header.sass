@@ -4,12 +4,16 @@
 	top: 0
 	left: 0
 	width: 100%
-	display: flex
-	align-items: center
-	justify-content: space-between
-	padding: 1.2rem 18.85rem 1rem 16.1rem
+	padding: 1.2rem 1rem
 	background: #FFF
 	transition: all 0.3s
+	&__box
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		max-width: 87rem
+		margin: 0 auto
 	&__logo
 		position: relative
 		margin: 0 0rem 0 0
@@ -73,3 +77,36 @@
 	&__phone
 		margin: 0 0 0 0.7rem
 		font-size: $px18
+
+.gamburger
+	display: none
+	flex-direction: column
+	justify-content: space-between
+	width: 2.8125rem
+	height: 1.6875rem
+	cursor: pointer
+	overflow: hidden
+	span
+		width: 2.8125rem
+		height: 3px
+		background: $titles-color
+		transition: all 0.5s
+		&:nth-child(2).open
+			transform: translateX(-100%)
+		&:nth-child(1).open
+			transform: rotate(45deg) translateY(0.6rem) translateX(0.4rem)
+			width: 2.8125rem
+		&:nth-child(3).open
+			transform: rotate(-45deg) translateY(-0.6rem) translateX(0.4rem)
+			width: 2.8125rem
+
+@media screen and ( max-width: 768px )
+	.header
+		&__logo
+			img
+				width:10.125rem
+		&__menu
+			display: none
+
+	.gamburger
+		display: flex
