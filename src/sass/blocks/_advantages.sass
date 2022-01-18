@@ -1,0 +1,58 @@
+.advantages
+	margin: 0 0 11.2rem 0
+	&__box
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		gap: 1.625rem
+	&__item
+
+.advantage
+	min-height: 15.5625rem
+	padding: 1.3rem 0rem 0 2rem
+	box-shadow: 0px 10.8919px 15.9189px rgba(0, 0, 0, 0.07)
+	&__icon
+		width: 3.75rem
+		margin: 0 0 1.1rem 0
+	&__name
+		position: relative
+		margin: 0 0 2.3rem 0
+		font-size: $px20
+		font-weight: 700
+		color: $titles-color
+		&::after
+			content: ''
+			position: absolute
+			bottom: -1.3rem
+			left: 0
+			width: 2.625rem
+			height: 2px
+			background: $titles-color
+	&__text
+		padding: 0 1.5rem 0 0
+		font-size: $px18
+		color: $main-color
+		letter-spacing: 0.2px
+
+@media screen and ( max-width: 768px )
+	.advantages
+		margin: 0 0 2.0625rem 0
+		&__box
+			grid-template-columns: repeat(2, 1fr)
+			gap: 2.25rem
+			padding: 0 1.2rem
+
+	.advantage
+		min-height: 9.1875rem
+		padding: 1rem
+		&__icon
+			width: 2.3125rem
+		&__name
+			margin: 0 0 1rem 0
+			font-size: $px14
+			&::after
+				bottom: -0.5rem
+				width: 1.5625rem
+				height: 1px
+		&__text
+			padding: 0 0 0 0
+			font-size: 0.625rem

@@ -1,0 +1,5 @@
+mixin advantage(icon, name, text)
+	article.advantages__item.advantage 
+		img.advantage__icon(src="img/" + icon, alt={name})
+		h6.advantage__name #{name}
+		p.advantage__text #{text}

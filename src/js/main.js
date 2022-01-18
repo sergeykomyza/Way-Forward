@@ -93,6 +93,45 @@ document.addEventListener('DOMContentLoaded', function () {
     //     $('.slider').slick("slickGoTo", i)
     // });
 
+// ============================================
+$('.slider-orientation__carousel').slick({
+    fade: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    variableWidth: true,
+    // prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
+    // nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
+                nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
+            }
+        }
+    ]
+});
+$(".prev").on("click", function () {
+    $('.slider-sales__carousel').slick("slickPrev")
+});
+$(".next").on("click", function () {
+    $('.slider-sales__carousel').slick("slickNext")
+});
+// пользовательская навигация
+// var dot = $(".dots__item");
+// $('.slider').on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+//     dot.removeClass("dots__item--active").eq(nextSlide).addClass("dots__item--active")
+// });
+// dot.on("click", function () {
+//     var i = dot.index(this);
+//     $('.slider').slick("slickGoTo", i)
+// });
+
 });
 // ================================================== HOVER ON MENU
     const menuItem = document.querySelectorAll('.menu__item')
@@ -108,7 +147,46 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
-// ================================================== 
+// ================================================== TABS
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+    const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector);
+    function hideContent() {
+        content.forEach(item => {
+            item.style.display = 'none';
+        });
+        tab.forEach(item => {
+            item.classList.remove(activeClass);
+        });
+    }
+
+    function showContent(i) {
+        content[i].style.display = 'block';
+        tab[i].classList.add(activeClass);
+    }
+
+    header.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = e.target;
+        if (target &&
+            (target.classList.contains(tabSelector.replace(/\./, "")) ||
+                target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+            tab.forEach((item, i) => {
+                if (target == item || target.parentNode == item) {
+                    hideContent();
+                    showContent(i);
+                }
+            });
+        }
+    });
+
+    hideContent();
+    showContent(0); // в скобках указываем индекс таба, который хотим видеть активным
+
+}
+
+tabs('.tabs__header', '.tabs__button', '.tabs__content', 'active');
 // ================================================== 
 // ================================================== 
 // ================================================== 
