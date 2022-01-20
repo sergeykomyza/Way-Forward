@@ -61,12 +61,13 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function () {
     $('.slider-sales__carousel').slick({
         fade: false,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         dots: false,
-        // prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
-        // nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
+        variableWidth: false,
+        prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
+        nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
         responsive: [
             {
                 breakpoint: 768,

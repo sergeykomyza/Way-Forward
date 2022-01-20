@@ -1,0 +1,8 @@
+mixin teacher(foto, name, value1, value2)
+	article.teachers__item.teacher 
+		figure.teacher__foto 
+			img(src="img/" + foto, alt={name})
+		.teacher__info 
+			a.teacher__name(href="/") #{name} 
+			p.teacher__val #{value1}
+			p.teacher__val #{value2}
