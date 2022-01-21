@@ -1,0 +1,41 @@
+section.faq 
+	h6.faq__title.title Часто задаваемые вопросы 
+	p.faq__tagtitle Подзаголовок с текстом
+	#accordion.faq__accordion.accordion
+		.accordion-item
+			#heading1.accordion-header(data-bs-toggle='collapse' data-bs-target='#collapse1')
+				span.accordion-header__toggle 
+				| Моему ребенку очень сложно усидеть на месте,у него проблемы с концентрацией внимания. Работаете ли вы с такими детьми?
+			#collapse1.accordion-collapse.collapse.show(aria-labelledby='heading1' data-bs-parent='#accordion')
+				.accordion-body
+					| Наш опыт говорит, что необучаемых детей не бывает, нужно только найти подход. На занятиях мы стараемся заинтересовать каждого ученика, и в этом помогает психолог. Часто у детей проблема поверить в себя, в то, что он может самостоятельно ответить правильно, не списывая у товарищей. Мы работаем и с этими проблемами.
+		.accordion-item
+			#heading2.accordion-header.collapsed(data-bs-toggle='collapse' data-bs-target='#collapse2')
+				span.accordion-header__toggle 
+				| Чем кормят детей? Сколько раз в день? Есть ли вегетарианское меню? А что, если у ребенка аллергия на определенные продукты?
+			#collapse2.accordion-collapse.collapse(aria-labelledby='heading2' data-bs-parent='#accordion')
+				.accordion-body
+					strong This is the first item's accordion body.
+					|  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+					code .accordion-body
+					| , though the transition does limit overflow.
+		.accordion-item
+			#heading3.accordion-header.collapsed(data-bs-toggle='collapse' data-bs-target='#collapse3')
+				span.accordion-header__toggle 
+				| Моему ребенку 5 лет, он плохо говорит, как действуете в этом случае?
+			#collapse3.accordion-collapse.collapse(aria-labelledby='heading3' data-bs-parent='#accordion')
+				.accordion-body
+					strong This is the first item's accordion body.
+					|  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+					code .accordion-body
+					| , though the transition does limit overflow.
+		.accordion-item
+			#heading4.accordion-header.collapsed(data-bs-toggle='collapse' data-bs-target='#collapse4')
+				span.accordion-header__toggle 
+				| Как проходят занятия онлайн?
+			#collapse4.accordion-collapse.collapse(aria-labelledby='heading4' data-bs-parent='#accordion')
+				.accordion-body
+					strong This is the first item's accordion body.
+					|  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+					code .accordion-body
+					| , though the transition does limit overflow.

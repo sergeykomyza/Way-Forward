@@ -1,0 +1,33 @@
+footer.footer 
+	img.footer__star(src="img/stamp-star.svg", alt="stamp-star")
+	.footer__box
+		.footer__info 
+			| © 2022 Way Forward
+			br
+			| ООО «Резонанс», ИНН/КПП 7707453840 / 770701001, ОГРН 1217700257037
+			br
+			| Телефон: +7 977 765-91-35
+			br
+			| WhatsApp: +7 977 765-91-35
+			br
+			| Юридический адрес: г. Москва, 1-й Тихвинский туп., д 5-7
+			br
+			| e-mail: info@nkorezon.com
+			br
+			| Режим работы: c 9:00 - 21:00 Без выходных
+			br
+			| Разработано студией: Logo-Monstr.ru
+		ul.footer__menu
+			each val in ['Как сделать заказ', 'Цены', 'Способы оплаты', 'Договор-оферта', 'Конфиденциальность', 'Отказ от услуги', 'Правила внутреннего распорядка']
+				li
+					a(href="/")= val
+		ul.footer__social.social 
+			each icon in ['fb.svg', 'google.svg', 'vk.svg', 'inst.svg', 'youtube.svg']
+				li 
+					a(href="/") 
+						img(src="img/" + icon, alt="social-icon")
+
+
+
+
+

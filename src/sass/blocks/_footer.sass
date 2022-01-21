@@ -1,3 +1,45 @@
 .footer
-	.map
-		height: 300px
+	position: relative
+	padding: 1.8rem 0
+	font-size: $px19
+	color: #FFF
+	background: $titles-color
+	&__star
+		position: absolute
+		left: 19rem
+		width: 2.375rem
+	&__box
+		display: flex
+		justify-content: center
+		padding: 1.8rem 0 0 0
+		border-top: 1.6px solid #FFF
+	&__info
+		margin: 0 3.5rem 0 0
+		line-height: 1.05
+	&__menu
+		a	
+			display: block
+			line-height: 1.02
+	&__social
+		display: flex
+		margin: 0 -8rem 0 0
+		li 
+			margin: 0 0.5rem 0 0
+
+@media screen and ( max-width: 1350px )
+	.footer
+		padding: 3.9rem 0 0 0
+		font-size: $px15
+		&__star
+			top: 1rem
+			left: 2rem
+		&__box
+			padding: 1.8rem 3.125rem 
+			flex-direction: column-reverse
+		&__menu
+			margin: 0 0 1rem 0
+		&__social
+			position: absolute
+			top: 1.5rem
+			right: 2rem
+			margin: 0 0 0 0

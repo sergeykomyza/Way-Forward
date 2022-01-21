@@ -23,10 +23,12 @@ const gamburger = document.querySelector('.gamburger');
 const firstLine = gamburger.querySelectorAll('span')[0];
 const middleLine = gamburger.querySelectorAll('span')[1];
 const lastLine = gamburger.querySelectorAll('span')[2];
+const menu = document.querySelector('.menu')
 gamburger.addEventListener('click', function(){
     middleLine.classList.toggle('open');
     firstLine.classList.toggle('open');
     lastLine.classList.toggle('open');
+    menu.classList.toggle('active')
 });
 
 // ================================================== МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
@@ -139,12 +141,16 @@ $(".next").on("click", function () {
     menuItem.forEach(item => {
         const subMenu = item.querySelector('.submenu')
         item.addEventListener('mouseover', function(){
-            subMenu.classList.add('active')
+            if(subMenu){
+                subMenu.classList.add('active')
+            }
         })
         item.addEventListener('mouseout', function(){
-            setTimeout(function(){
-                subMenu.classList.remove('active')
-            }, 1000)
+            if(subMenu){
+                setTimeout(function(){
+                    subMenu.classList.remove('active')
+                }, 1000)
+            }
         })
     })
 
@@ -188,7 +194,10 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 }
 
 tabs('.tabs__header', '.tabs__button', '.tabs__content', 'active');
-// ================================================== 
+
+// ================================================== ACCORDEON
+
+
 // ================================================== 
 // ================================================== 
 // ================================================== 
@@ -196,34 +205,34 @@ tabs('.tabs__header', '.tabs__button', '.tabs__content', 'active');
 // ================================================== 
 
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
-// document.addEventListener('DOMContentLoaded', function () {
-//     setTimeout(function() {
-//         var headID = document.getElementsByTagName("body")[0];         
-//         var newScript = document.createElement('script');
-//         newScript.type = 'text/javascript';
-//         newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-//         headID.appendChild(newScript);
-//     }, 3000);
-//     setTimeout(function() {
-//         var myMap = new ymaps.Map('map', {
-//             center: [48.570612, 39.341628],
-//             zoom: 16
-//         }, {
-//             searchControlProvider: 'yandex#search'
-//         }),
-//             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-//                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-//             ),
-//             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-//                 hintContent: 'г. Луганск, кв. Лиховида 1',
-//                 balloonContent: 'г. Луганск, кв. Лиховида 1'
-//             }, {
-//                 iconLayout: 'default#image',
-//                 iconImageHref: 'img/logo_sign.png',
-//                 iconImageSize: [40, 45],
-//                 iconImageOffset: [-5, -38]
-//             })
-//         myMap.geoObjects
-//             .add(myPlacemark)
-//     }, 4000);
-// });
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function() {
+        var headID = document.getElementsByTagName("body")[0];         
+        var newScript = document.createElement('script');
+        newScript.type = 'text/javascript';
+        newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+        headID.appendChild(newScript);
+    }, 1000);
+    setTimeout(function() {
+        var myMap = new ymaps.Map('map', {
+            center: [48.570612, 39.341628],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'г. Луганск, кв. Лиховида 1',
+                balloonContent: 'г. Луганск, кв. Лиховида 1'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/logo_sign.png',
+                iconImageSize: [40, 45],
+                iconImageOffset: [-5, -38]
+            })
+        myMap.geoObjects
+            .add(myPlacemark)
+    }, 2000);
+});

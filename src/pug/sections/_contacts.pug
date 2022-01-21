@@ -1,0 +1,22 @@
+section.contacts 
+	h6.contacts__title.title Как нас найти ?
+	p.contacts__tagtitle 
+		| г. Москва, пер. Большой Козихинский, д. 22, стр. 2, 3 этаж, ком. 1-5
+		br 
+		| Телефон: +7 977 765-91-35
+		br 
+		| WhatsApp: +7 977 765-91-35
+	.contacts__box
+		form.contacts__form.form(action="#") 
+			h6.form__title 
+				| Остались вопросы ?
+				br
+				| Оставьте заявку!
+			input.form__input(type="text" placeholder="Имя")
+			input.form__input(type="text" placeholder="E-mail")
+			input.form__input(type="text" placeholder="Телефон")
+			fieldset.form__agree
+				input.form__checkbox( id="checkbox" type="checkbox" checked)
+				label.form__label(for="checkbox") Отправляя форму, я даю согласие на обработку своих персональных данных
+			button.form__button.button Отправить
+		.contacts__map#map
