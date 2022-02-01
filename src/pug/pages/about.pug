@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Way Forward | О школе
+	body
+		//- mixins
+		include ./../mixins/_advantage.pug
+		include ./../mixins/_teacher.pug
+		include ./../mixins/_mixin3.pug
+		include ./../mixins/_mixin4.pug
+		include ./../mixins/_mixin5.pug
+		// ======================================== HEADER
+		include ./../sections/_header.pug
+		// ======================================== HOME
+		section.home.about-home
+			img.home__bg.visible-768(src="img/home-bg.png", alt="home-bg")
+			.home__box.box
+				.home__content 
+					h1.home__title О школе
+					p.home__text.home__text--18px WF - образовательный центр, в котором каждому ребенку #[span.home__text--yellow комфортно учиться.] Здесь дети изучают предметы с интересом, добиваются академических, творческих и спортивных побед.
+					p.home__text.home__text--18px В центре у каждого ребенка есть возможность получить #[span.home__text--yellow качественное образование] мирового уровня и раскрыть интеллектуальный и творческий потенциал. 
+					p.home__text.home__text--18px Ученики школы #[span.home__text--yellow добиваются успехов] во всех сферах жизни. У них появляется здоровый интерес к научной, культурной, общественной деятельности.
+					.home__buttons
+						.buttons-wrap
+							button.button.home__button Записаться на открытый урок
+							button.home__button--transparent О программах
+				img.home__img(src="img/about-home.svg", alt="about-home")
+		// ======================================== ПРЕИМУЩЕСТВА
+		.advantages 
+			.advantages__box.box
+				+advantage('advantage-5.svg', 'Онлайн и оффлайн', 'Удобный формат обучения')
+				+advantage('advantage-6.svg', 'Лучшие практики', 'Опыт лучших российских и зарубежных методик')
+				+advantage('advantage-7.svg', 'Просторные классы', 'Пространство, идеально оборудованное для занятий')
+				+advantage('advantage-8.svg', 'Высокий уровень', 'Достойная академическая подготовка и гармоничное развитие личности')
+		// ======================================== НАША МИССИЯ
+		include ./../sections/_mission.pug
+		// ======================================== ПРЕИМУЩЕСТВА НАШЕЙ МЕТОДИКИ
+		include ./../sections/_metodic.pug
+		// ======================================== КОМАНДА WAY FORWARD
+		include ./../sections/_team.pug
+		// ======================================== КАК НАС НАЙТИ
+		include ./../sections/_contacts.pug
+		// ======================================== FOOTER
+		include ./../sections/_footer.pug
+		// ======================================== SCRIPTS
+		include ./../sections/_scripts.pug

@@ -1,0 +1,41 @@
+.mission
+	margin: 0 0 5rem 0
+	&__box
+		display: flex
+	&__img
+		width: 39.125rem
+		margin: 0 2rem 0 0
+	&__info
+	&__title
+		position: relative
+		margin: 0 0 4.8125rem 0
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			top: 5rem
+			width: 5.875rem
+			height: 0.4375rem
+			background: $titles-color
+	&__text
+		font-size: $px18
+		color:#737373
+
+@media screen and ( max-width: 768px )
+	.mission
+		background: url('../img/mission-bg.png') 9rem 1rem/12.6875rem no-repeat
+		&__box
+			padding: 0 1.2rem
+		&__title
+			margin: 0 0 3rem 0
+			text-align: center
+			&::after
+				top: 3rem
+				left: 50%
+				transform: translate(-50%)
+				width: 4.8125rem
+				height: 2px
+		&__img
+			display: none
+		&__text
+			font-size: $px14

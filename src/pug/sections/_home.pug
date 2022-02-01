@@ -2,7 +2,6 @@ section.home
 	img.home__bg.visible-768(src="img/home-bg.png", alt="home-bg")
 	.home__box.box
 		.home__content 
-			h1.home__title way forward
 			p.home__text.hidden-768 Образовательный центр для школьников и дошкольников.
 			p.home__text.visible-768 Образовательный центр для школьников и дошкольников, в котором детям комфортно учиться, а родители уверены в качестве их образования.
 			p.home__text.hidden-768 Сочетаем проверенную временем методику: методика погружения с элементами резонансной практики. 
@@ -11,13 +10,13 @@ section.home
 				button.watch-video.visible-768 
 					| посмотреть видео
 					img(src="img/watch-video-arrow.svg", alt="watch-video-arrow")
-				button.button.home__button Записаться на открытый урок
-				button.home__button--transparent Узнать больше
+				.buttons-wrap
+					button.button.home__button Записаться на открытый урок
+					button.home__button--transparent Узнать больше
 		.home__video.video 
 			img.video__bg(src="img/video-bg.webp", alt="video")
-			//- img.video__bg.visible-768(src="img/video-bg-mobile.webp", alt="video")
-			.video__box 
-				iframe(src='https://www.youtube.com/embed/oGi8Z3W2AYo' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+			a.video__box(data-fancybox href="img/Катя_рассказывает.mp4")
+				img.video__play(src="img/video-play.svg", alt="video-play")
 
 
 

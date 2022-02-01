@@ -17,17 +17,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- custom styles-->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Site</title>
+    <title>Way Forward | Главная</title>
   </head>
   <body>
     <!-- ======================================== HEADER-->
     <header class="header">
-      <div class="header__box">
-        <figure class="header__logo"> <img src="img/header-logo.png" alt="logo"/>
-          <figcaption class="header__adress hidden-768">г. Москва, пер. Большой Козихинский, <br/>д. 22, стр. 2, 3 этаж, ком. 1-5 </figcaption>
-        </figure>
+      <div class="header__box"><a href="index.html"> 
+          <figure class="header__logo"> <img src="img/header-logo.svg" alt="logo"/>
+            <figcaption class="header__adress hidden-768">г. Москва, пер. Большой Козихинский, <br/>д. 22, стр. 2, 3 этаж, ком. 1-5 </figcaption>
+          </figure></a>
         <ul class="header__menu menu"> 
-          <li class="menu__item"> <a class="menu__link" href="">О школе</a></li>
+          <li class="menu__item"> <a class="menu__link" href="about.html">О школе</a></li>
           <li class="menu__item"> <a class="menu__link" href="">Услуги</a>
             <ul class="submenu"> 
               <li class="submenu__item"> <a class="submenu__link" href="">Подготовка к школе</a></li>
@@ -56,7 +56,6 @@
     <section class="home"><img class="home__bg visible-768" src="img/home-bg.png" alt="home-bg"/>
       <div class="home__box box">
         <div class="home__content"> 
-          <h1 class="home__title">way forward</h1>
           <p class="home__text hidden-768">Образовательный центр для школьников и дошкольников.</p>
           <p class="home__text visible-768">Образовательный центр для школьников и дошкольников, в котором детям комфортно учиться, а родители уверены в качестве их образования.</p>
           <p class="home__text hidden-768">Сочетаем проверенную временем методику: методика погружения с элементами резонансной практики. </p>
@@ -64,15 +63,13 @@
           <div class="home__buttons"> 
             <button class="watch-video visible-768">
                посмотреть видео<img src="img/watch-video-arrow.svg" alt="watch-video-arrow"/></button>
-            <button class="button home__button">Записаться на открытый урок</button>
-            <button class="home__button--transparent">Узнать больше</button>
+            <div class="buttons-wrap">
+              <button class="button home__button">Записаться на открытый урок</button>
+              <button class="home__button--transparent">Узнать больше</button>
+            </div>
           </div>
         </div>
-        <div class="home__video video"> <img class="video__bg" src="img/video-bg.webp" alt="video"/>
-          <div class="video__box"> 
-            <iframe src="https://www.youtube.com/embed/oGi8Z3W2AYo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-          </div>
-        </div>
+        <div class="home__video video"> <img class="video__bg" src="img/video-bg.webp" alt="video"/><a class="video__box" data-fancybox="data-fancybox" href="img/Катя_рассказывает.mp4"><img class="video__play" src="img/video-play.svg" alt="video-play"/></a></div>
       </div>
     </section>
     <!-- ======================================== АКЦИИ -->

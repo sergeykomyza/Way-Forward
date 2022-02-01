@@ -11,7 +11,7 @@
 	&__box
 		display: flex
 		justify-content: center
-		padding: 1.8rem 0 0 0
+		padding: 1.8rem 1.2rem
 		border-top: 1.6px solid #FFF
 	&__info
 		margin: 0 3.5rem 0 0
@@ -22,11 +22,16 @@
 			line-height: 1.02
 	&__social
 		display: flex
-		margin: 0 -8rem 0 0
+		margin: 0 0rem 0 0
 		li 
 			margin: 0 0.5rem 0 0
 
 @media screen and ( max-width: 1350px )
+	.footer
+		&__box
+			justify-content: flex-start
+
+@media screen and ( max-width: 768px )
 	.footer
 		padding: 3.9rem 0 0 0
 		font-size: $px15

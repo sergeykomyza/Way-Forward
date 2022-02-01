@@ -61,6 +61,7 @@ $(document).ready(function () {
 
 // ================================================== СЛАЙДЕРЫ (https://kenwheeler.github.io/slick/)
 document.addEventListener('DOMContentLoaded', function () {
+
     $('.slider-sales__carousel').slick({
         fade: false,
         slidesToShow: 2,
@@ -80,21 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         ]
     });
-    $(".prev").on("click", function () {
-        $('.slider-sales__carousel').slick("slickPrev")
-    });
-    $(".next").on("click", function () {
-        $('.slider-sales__carousel').slick("slickNext")
-    });
-    // пользовательская навигация
-    // var dot = $(".dots__item");
-    // $('.slider').on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-    //     dot.removeClass("dots__item--active").eq(nextSlide).addClass("dots__item--active")
-    // });
-    // dot.on("click", function () {
-    //     var i = dot.index(this);
-    //     $('.slider').slick("slickGoTo", i)
-    // });
 
 // ============================================
 $('.slider-orientation__carousel').slick({
@@ -119,12 +105,12 @@ $('.slider-orientation__carousel').slick({
         }
     ]
 });
-$(".prev").on("click", function () {
-    $('.slider-sales__carousel').slick("slickPrev")
-});
-$(".next").on("click", function () {
-    $('.slider-sales__carousel').slick("slickNext")
-});
+// $(".prev").on("click", function () {
+//     $('.slider-sales__carousel').slick("slickPrev")
+// });
+// $(".next").on("click", function () {
+//     $('.slider-sales__carousel').slick("slickNext")
+// });
 // пользовательская навигация
 // var dot = $(".dots__item");
 // $('.slider').on("beforeChange", function (event, slick, currentSlide, nextSlide) {
@@ -134,6 +120,31 @@ $(".next").on("click", function () {
 //     var i = dot.index(this);
 //     $('.slider').slick("slickGoTo", i)
 // });
+
+// ============================================
+// if(document.documentElement.clientWidth < 768){
+//     $('.slider-metodic').slick({
+//         fade: false,
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         arrows: true,
+//         dots: false,
+//         variableWidth: false,
+//         prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
+//         nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>'
+//     });
+// }
+// ============================================
+    $('.slider-team__carousel').slick({
+        fade: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        variableWidth: false,
+        prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
+        nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>'
+    });
 
 });
 // ================================================== HOVER ON MENU
@@ -156,7 +167,7 @@ $(".next").on("click", function () {
 
 // ================================================== TABS
 const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
-    const header = document.querySelector(headerSelector),
+    const headerTabs = document.querySelector(headerSelector),
         tab = document.querySelectorAll(tabSelector),
         content = document.querySelectorAll(contentSelector);
     function hideContent() {
@@ -173,7 +184,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
         tab[i].classList.add(activeClass);
     }
 
-    header.addEventListener('click', (e) => {
+    headerTabs.addEventListener('click', (e) => {
         e.preventDefault();
         const target = e.target;
         if (target &&
@@ -192,8 +203,9 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     showContent(0); // в скобках указываем индекс таба, который хотим видеть активным
 
 }
-
-tabs('.tabs__header', '.tabs__button', '.tabs__content', 'active');
+if(document.querySelector('.orientation')){
+    tabs('.tabs__header', '.tabs__button', '.tabs__content', 'active');
+}
 
 // ================================================== ACCORDEON
 
@@ -215,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
     setTimeout(function() {
         var myMap = new ymaps.Map('map', {
-            center: [48.570612, 39.341628],
+            center: [55.764693, 37.595456],
             zoom: 16
         }, {
             searchControlProvider: 'yandex#search'
@@ -224,12 +236,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
             ),
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'г. Луганск, кв. Лиховида 1',
-                balloonContent: 'г. Луганск, кв. Лиховида 1'
+                hintContent: 'Большой Козихинский переулок, 22с2',
+                balloonContent: 'г. Москва, пер. Большой Козихинский, д. 22, стр. 2, 3 этаж, ком. 1-5'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'img/logo_sign.png',
-                iconImageSize: [40, 45],
+                iconImageHref: 'img/header-logo.svg',
+                iconImageSize: [150, 45],
                 iconImageOffset: [-5, -38]
             })
         myMap.geoObjects
