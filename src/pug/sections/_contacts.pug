@@ -17,6 +17,11 @@ section.contacts
 			input.form__input(type="text" placeholder="Телефон")
 			fieldset.form__agree
 				input.form__checkbox( id="checkbox" type="checkbox" checked)
-				label.form__label(for="checkbox") Отправляя форму, я даю согласие на обработку своих персональных данных
+				label.form__label(for="checkbox") 
+					span Отправляя форму, подтверждаю согласие с условиями #[a(href="/") договора оферты] 
+			fieldset.form__agree
+				input.form__checkbox( id="checkbox1" type="checkbox" checked)
+				label.form__label(for="checkbox1") 
+					span Отправляя форму, я даю согласие на обработку своих #[a(href="/") персональных данных] 
 			button.form__button.button Отправить
 		.contacts__map#map
