@@ -4,7 +4,8 @@
 /* ====================================================== ОБЩИЕ СТИЛИ */ 
 *,
 p,
-h1,h2,h3,h4,h5,h6
+h1,h2,h3,h4,h5,h6,
+figure
 	box-sizing: border-box
 	margin: 0
 	padding: 0
@@ -19,6 +20,7 @@ body
 	font-weight: 400
 	color: $main-color
 	overflow-x: hidden
+	// height: 10000px
 
 ul 
 	margin: 0
@@ -68,6 +70,9 @@ section
 	font-weight: 700
 	color: $titles-color
 
+.link
+
+
 .visible-768
 	display: none !important
 
@@ -116,3 +121,10 @@ section
 @import 'blocks/metodic'
 /* ============================================================= КОМАНДА WAY FORWARD */
 @import 'blocks/team'
+
+/* ============================================================= СТРАНИЦА - УСЛУГА */
+
+/* ============================================================= СТОИМОСТЬ УСЛУГ */
+@import 'blocks/price'
+/* ============================================================= НАМ ДОВЕРЯЮТ */
+@import 'blocks/reviews'

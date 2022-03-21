@@ -1,0 +1,18 @@
+.tarif 
+	.tarif__price 17 000 руб. #[span /месяц]
+	h6.tarif__name Базовый
+	p.tarif__text For most businesses that want to otpimize web queries
+	ul.tarif__list 
+		- 
+			var list = [
+				'All limited links',
+				'Own analytics platform',
+				'Chat support',
+				'Optimize hashtags',
+				'Unlimited users'
+			]
+		each item in list 
+			li
+				img(src="img/check-circle-1.svg", alt="")
+				= item
+	button.tarif__button Выбрать

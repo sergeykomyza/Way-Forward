@@ -1,16 +1,19 @@
 .home
-	margin: 0 0 3rem 0
+	margin: 0 0 7rem 0
 	padding: 10rem 0 0 0
 	&__box
 		display: flex
 		align-items: flex-end
 	&__content
-		width: 32.5rem
+		width: 43.5rem
 	&__title
 		margin: 0 0 0.6rem 0
 		font-size: $px36
 		font-weight: 700
 		color: $titles-color
+	&__tagtitle
+		font-size: $px36
+		color: #0095E0
 	&__text
 		margin: 0 0 1.4rem 0
 		font-size: $px22
@@ -22,7 +25,28 @@
 		display: flex
 		align-items: center
 		margin: 2.2rem 0 0 0
-	&__button
+	&__video
+	&__bg
+		position: absolute
+		z-index: -1
+		top: 5rem
+		left: 0
+		width: 100%
+	&__img
+		position: absolute
+		z-index: -1
+		width: 41.75rem
+		top: 4rem
+		right: calc(50% - 41rem)
+	&__link
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.buttons
+	display: flex
+	align-items: center
+	&__item
 		margin: 0 0.6rem 0 0
 		&--transparent
 			display: flex
@@ -35,22 +59,6 @@
 			color: $titles-color
 			border: 1px solid $titles-color
 			border-radius: 5px
-	&__video
-	&__bg
-		position: absolute
-		z-index: -1
-		top: 5rem
-		left: 0
-		width: 100%
-	&__img
-		position: absolute
-		width: 41.75rem
-		top: 4rem
-		right: calc(50% - 41rem)
-
-.buttons-wrap
-	display: flex
-	align-items: center
 
 .video
 	position: relative
@@ -112,14 +120,7 @@
 			margin: 0
 			padding: 0 0 0 0
 			background: rgba(255,255,255,0.8)
-		&__button
-			padding: 0.78rem 1.5rem
-			font-size: 0.60125rem
-			&--transparent
-				width: auto
-				height: auto
-				padding: 0.78rem 1.5rem
-				font-size: 0.60125rem
+		
 		&__video
 			display: none
 		&__img
@@ -128,6 +129,15 @@
 			right: calc(50% - 18.5rem)
 			width: 16.4rem
 			opacity: 0.5
+	.buttons
+		&__item
+			padding: 0.78rem 1.5rem
+			font-size: 0.60125rem
+			&--transparent
+				width: auto
+				height: auto
+				padding: 0.78rem 1.5rem
+				font-size: 0.5rem
 
 // ======================================== страница О школе
 .about-home
@@ -136,6 +146,16 @@
 
 @media screen and ( max-width: 768px )
 	.about-home
+		height: auto
+		margin: 0 0 2rem 0
+		background: none
+		.home__buttons
+			height: auto
+			margin: 1rem 0 0 0
+
+// ======================================== страница услуги
+@media screen and ( max-width: 768px )
+	.service-home
 		height: auto
 		margin: 0 0 2rem 0
 		background: none

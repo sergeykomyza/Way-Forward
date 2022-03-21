@@ -7,7 +7,6 @@ html(lang="ru")
 		//- mixins
 		include ./../mixins/_advantage.pug
 		include ./../mixins/_teacher.pug
-		include ./../mixins/_mixin3.pug
 		include ./../mixins/_mixin4.pug
 		include ./../mixins/_mixin5.pug
 		// ======================================== HEADER
@@ -22,9 +21,9 @@ html(lang="ru")
 					p.home__text.home__text--18px В центре у каждого ребенка есть возможность получить #[span.home__text--yellow качественное образование] мирового уровня и раскрыть интеллектуальный и творческий потенциал. 
 					p.home__text.home__text--18px Ученики школы #[span.home__text--yellow добиваются успехов] во всех сферах жизни. У них появляется здоровый интерес к научной, культурной, общественной деятельности.
 					.home__buttons
-						.buttons-wrap
-							button.button.home__button Записаться на открытый урок
-							button.home__button--transparent О программах
+						.buttons
+							button.button.buttons__item Записаться на открытый урок
+							button.buttons__item--transparent Узнать больше
 				img.home__img(src="img/about-home.svg", alt="about-home")
 		// ======================================== ПРЕИМУЩЕСТВА
 		.advantages 

@@ -6,6 +6,8 @@
 		width: 39.125rem
 		margin: 0 2rem 0 0
 	&__info
+		margin: 0 0 0 0
+		font-size: $px20
 	&__title
 		position: relative
 		margin: 0 0 4.8125rem 0
@@ -23,6 +25,29 @@
 		color:#737373
 	&__video
 		@extend .metod__video
+	&__list
+		margin: 0 0 1rem 0
+		padding: 0 3rem 0 1rem
+	&__item
+		position: relative
+		&::after
+			content: ""
+			position: absolute
+			left: -1rem
+			top: 0.6rem
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background: #2D3A6E
+	&__link
+		margin: 0 0 1rem 0
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	&__checklist
+		margin: 1rem 0
+		
+	
 
 @media screen and ( max-width: 768px )
 	.mission
@@ -42,3 +67,5 @@
 			display: none
 		&__text
 			font-size: $px14
+		&__info
+			font-size: $px15

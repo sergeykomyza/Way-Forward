@@ -1,0 +1,9 @@
+mixin review(foto, date)
+	article.review
+		img.review__img(src="img/" + foto, alt="review")
+		.review__content
+			figure.review__logo
+				img(src="img/logo-yellow.svg", alt="logo-yellow")
+			.review__info
+				.review__name wayforward
+				p.review__date #{date}

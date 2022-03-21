@@ -1,11 +1,33 @@
 .orientation
 	margin: 0 0 4.5rem 0
-	overflow: hidden
 	&__box
 		// padding: 0 2.8rem
 	&__title
 		margin: 0 0 4rem 0
 		text-align: center
+	&__info
+	&__img
+		width: 32.5rem
+		height: 32.5rem
+		object-fit: contain
+
+.info-orientation
+	width: 35.25rem
+	height: 35.4375rem
+	margin: 0 3rem 0 0
+	padding: 2.1875rem 2.1875rem 5rem 2.1875rem
+	box-shadow: 0px 10.8919px 15.9189px rgba(0, 0, 0, 0.07)
+	border-radius: 10px
+	&__title
+		margin: 0 0 2.0625rem 0
+		font-size: $px36
+		color: $titles-color
+	&__tagtitle
+		margin: 0 0 2.0625rem 0
+		font-size: $px24
+		color: $main-color
+	&__text
+		font-size: $px18
 
 .tabs
 	&__header
@@ -26,10 +48,11 @@
 				width: 100%
 				height: 1px
 				background: $main-color
-
 	&__contents
 		position: relative
-	&__content
+	&__box
+		display: flex
+		align-items: center
 
 .slider-orientation
 	&__carousel
@@ -154,14 +177,18 @@
 @media screen and ( max-width: 768px )
 	.orientation
 		margin: 0 0 0 0
-
+		&__title
+			margin: 0 0 1rem 0
+		&__img
+			width: 100%
 	.tabs
 		&__header
 			margin: 0 0 2rem 0
+		&__box
+			flex-direction: column
 		&__button
 			padding: 0 0.5rem 0.5rem 0.5rem
 			font-size: 0.625rem
-
 	.slider-orientation
 		&__carousel
 			.slick-list
@@ -195,6 +222,16 @@
 				&__button
 					padding: 0.6rem 2.8rem
 					font-size: 0.485rem
-	
 	.stamp
 		display: none
+	.info-orientation
+		width: 100%
+		height: auto
+		margin: 0 0 1rem 0
+		padding: 1rem
+		&__title
+			font-size: 1.25rem
+		&__tagtitle
+			font-size: 1rem
+		&__text
+			font-size: 0.8rem

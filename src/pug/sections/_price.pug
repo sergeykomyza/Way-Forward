@@ -1,0 +1,38 @@
+section.prices
+	h4.prices__title.title Стоимость услуг
+	#prices-tabs.tabs
+		.tabs__header
+			button.tabs__button Онлайн
+			button.tabs__button Офлайн
+			button.tabs__button Индивидуальные
+			button.tabs__button Групповые
+		.tabs__contents 
+			.tabs__content 
+				.tarifs
+					include ./../layouts/_tarif.pug
+					include ./../layouts/_tarif.pug
+					.tarif.tarif-central 
+						.tarif-central__profitable Выгодно
+						.tarif-central__price 85 000 руб.#[span /курс]
+						h6.tarif-central__name Комплексный
+						p.tarif-central__text For most businesses that want to otpimize web queries
+						ul.tarif-central__list 
+							- 
+								var list = [
+									'All limited links',
+									'Own analytics platform',
+									'Chat support',
+									'Optimize hashtags',
+									'Unlimited users'
+								]
+							each item in list 
+								li
+									img(src="img/check-circle-2.svg", alt="")
+									= item
+						button.tarif-central__button.tarif-central__button--transparent Оставить заявку
+						button.tarif-central__button Оплатить
+					include ./../layouts/_tarif.pug
+					include ./../layouts/_tarif.pug
+			.tabs__content asdf
+			.tabs__content 4567
+			.tabs__content -981-92834

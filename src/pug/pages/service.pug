@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Way Forward | Услуга - Резонансное пение для взрослых
+	body
+		//- mixins
+		include ./../mixins/_advantage.pug
+		include ./../mixins/_teacher.pug
+		include ./../mixins/_mixin4.pug
+		include ./../mixins/_mixin5.pug
+		// ======================================== HEADER
+		include ./../sections/_header.pug
+		// ======================================== HOME
+		section.home.service-home
+			img.home__bg.visible-768(src="img/home-bg.png", alt="home-bg")
+			.home__box.box
+				.home__content
+					h1.home__title.service-home__title Курсы будущих первоклассников
+					//- b.home__tagtitle для взрослых
+					p.home__text.home__text--18px Для того, чтобы дошкольники развивались гармонично, WF сформирована программа развития методом погружения в предмет для детей младше 7 лет. 
+					p.home__text.home__text--18px Как правило занятия посещают дети 5+. Практики проходят под руководством квалифицированного педагога и психолога, которые аккуратно помогают детям найти общий язык на занятиях, чуть лучше социализироваться и способствуют хорошей атмосфере в классе. 
+					p.home__text.home__text--18px На занятиях мы стараемся замотивировать всех детей и обеспечить каждого достойным уровнем знаний, перед поступлением в школу. Занятия проходят с чередованием музыкальных и спортивных активностей.
+					a.home__link(href="/") 
+						b Хотите узнать, насколько ваш ребенок готов к школе? Предлагаем наш бесплатный универсальный чеклист, чтобы проверить это!
+					.home__buttons
+						.buttons
+							button.button.buttons__item Записаться на открытый урок
+							button.buttons__item--transparent Узнать больше
+				img.home__img(src="img/service-home.svg", alt="about-home")
+		// ======================================== ДЛЯ КОГО НАШИ КУРСЫ
+		section.orientation 
+			.orientation__box.box 
+				h2.orientation__title.title Для кого наши курсы?
+				#orientation-tabs.tabs 
+					.tabs__header
+						button.tabs__button 1 месяц
+						button.tabs__button 2 месяц
+						button.tabs__button 3 месяц
+						button.tabs__button 4 месяц
+					.tabs__contents
+						.tabs__content
+							.tabs__box
+								.orientation__info.info-orientation
+									h6.info-orientation__title Изучение основ
+									p.info-orientation__tagtitle ~5 часов математики, грамматики и творческого развития
+									p.info-orientation__text Задача организации, в особенности же рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют от нас анализа форм развития. Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития.
+										br
+										br
+										| Равным образом дальнейшее развитие различных форм деятельности требуют от нас анализа модели развития.
+								img.orientation__img(src="img/orientation-1.svg", alt="orientation")
+						.tabs__content
+							| 1234
+						.tabs__content
+							| asdfasdf
+						.tabs__content
+							| 12341234
+		// ======================================== ПРЕИМУЩЕСТВА
+		.advantages 
+			.advantages__box.box
+				+advantage('advantage-9.svg', 'Без стресса', 'С радостью начинаем учебный год')
+				+advantage('advantage-10.svg', 'Социализация', 'Фундамент для гармоничных отношений с одноклассниками')
+				+advantage('advantage-11.svg', 'Интерес к учебе', 'Здоровое любопытство к изучению программы')
+				+advantage('advantage-12.svg', 'Лидерские качества', 'Раскрытие потенциала ')
+		// ======================================== ЧТО ВЫ СМОЖЕТЕ
+		section.mission 
+			.mission__box.box 
+				img.mission__img(src="img/mission-service.svg", alt="mission")
+				.mission__info 
+					h3.mission__title.title Что вы сможете?
+					ul.mission__list 
+						li.mission__item попробовать себя в разных направлениях 
+						li.mission__item расширить кругозор, познакомиться с новыми для него областями
+						li.mission__item разобраться более детально “как устроен мир”
+						li.mission__item развить критическое мышление, навыки проверки информации и любознательность
+					a.mission__link(href="/") 
+						b Курс для дошкольников рассчитан на 3 месяца
+					br
+					a.mission__link(href="/") 
+						b Полученных знаний будет достаточно для учебы в школе
+					p.mission__checklist Скачайте чеклист, чтобы узнать, насколько ваш ребенок готов к школе!
+					.buttons
+						button.button.buttons__item Записаться на открытый урок
+						button.buttons__item--transparent Узнать больше
+		// ======================================== СТОИМОСТЬ УСЛУГ
+		include ./../sections/_price.pug
+		// ======================================== НАМ ДОВЕРЯЮТ
+		include ./../sections/_reviews.pug
+		// ======================================== КОМАНДА WAY FORWARD
+		include ./../sections/_team.pug
+		// ======================================== КАК НАС НАЙТИ
+		include ./../sections/_contacts.pug
+
+		// ======================================== FOOTER
+		include ./../sections/_footer.pug
+		// ======================================== SCRIPTS
+		include ./../sections/_scripts.pug

@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: true,
         dots: false,
         variableWidth: false,
-        prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
-        nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
+        prevArrow: '<button type="button" class="prev"><img src="img/arrow-slider-button.svg"></button>',
+        nextArrow: '<button type="button" class="next"><img src="img/arrow-slider-button.svg"></button>',
         responsive: [
             {
                 breakpoint: 768,
@@ -99,8 +99,29 @@ $('.slider-orientation__carousel').slick({
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true,
-                prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
-                nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>',
+                prevArrow: '<button type="button" class="prev"><img src="img/arrow-slider-button.svg"></button>',
+                nextArrow: '<button type="button" class="next"><img src="img/arrow-slider-button.svg"></button>',
+            }
+        }
+    ]
+});
+
+// ============================================
+$('.reviews-slider__carousel').slick({
+    fade: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    variableWidth: false,
+    prevArrow: '<button type="button" class="prev"><img src="img/arrow-slider-button.svg"></button>',
+    nextArrow: '<button type="button" class="next"><img src="img/arrow-slider-button.svg"></button>',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         }
     ]
@@ -142,8 +163,8 @@ $('.slider-orientation__carousel').slick({
         arrows: true,
         dots: false,
         variableWidth: false,
-        prevArrow: '<button type="button" class="prev"><img src="../img/arrow-slider-button.svg"></button>',
-        nextArrow: '<button type="button" class="next"><img src="../img/arrow-slider-button.svg"></button>'
+        prevArrow: '<button type="button" class="prev"><img src="img/arrow-slider-button.svg"></button>',
+        nextArrow: '<button type="button" class="next"><img src="img/arrow-slider-button.svg"></button>'
     });
 
 });
@@ -166,10 +187,13 @@ $('.slider-orientation__carousel').slick({
     })
 
 // ================================================== TABS
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
-    const headerTabs = document.querySelector(headerSelector),
-        tab = document.querySelectorAll(tabSelector),
-        content = document.querySelectorAll(contentSelector);
+
+const tabs = (wrapperSelector, headerSelector, tabSelector, contentSelector, activeClass) => {
+    const wrapper = document.querySelector(wrapperSelector),
+        headerTabs = wrapper.querySelector(headerSelector),
+        tab = wrapper.querySelectorAll(tabSelector),
+        content = wrapper.querySelectorAll(contentSelector);
+
     function hideContent() {
         content.forEach(item => {
             item.style.display = 'none';
@@ -203,9 +227,15 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     showContent(0); // в скобках указываем индекс таба, который хотим видеть активным
 
 }
-if(document.querySelector('.orientation')){
-    tabs('.tabs__header', '.tabs__button', '.tabs__content', 'active');
+
+if(document.querySelector('#orientation-tabs')){
+    tabs('#orientation-tabs', '.tabs__header', '.tabs__button', '.tabs__content', 'active');
 }
+if(document.querySelector('#prices-tabs')){
+    tabs('#prices-tabs', '.tabs__header', '.tabs__button', '.tabs__content', 'active');
+}
+
+
 
 // ================================================== ACCORDEON
 

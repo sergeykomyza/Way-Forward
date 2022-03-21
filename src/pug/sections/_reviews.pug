@@ -1,0 +1,11 @@
+include ./../mixins/_review.pug
+
+section.reviews 
+	h5.reviews__title.title Нам доверяют
+	p.reviews__tagtitle О нашей работе лучше всего говорят отзывы учеников и их родителей. 
+	.reviews-slider
+		.reviews-slider__carousel
+			+review('review-1.jpg', 'december 11, 2019')
+			+review('review-2.jpg', 'december 11, 2019')
+			+review('review-3.jpg', 'december 11, 2019')
+			+review('review-1.jpg', 'december 11, 2019')
